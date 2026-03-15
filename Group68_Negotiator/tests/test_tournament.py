@@ -2,8 +2,9 @@ import pandas as pd
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent.parent)) # check one level up for imports
-from Group68_Negotiator.group_68_negotiator import GroupN_Negotiator
+# Allow running this file both directly and as a module.
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+from Group68_Negotiator.group_68_negotiator import Group68_Negotiator
 
 # Run our agent against itself for a basic sanity check.
 # Set up negMAS negotiation session with the two agent instances.
@@ -34,7 +35,7 @@ if __name__ == "__main__":
     run_self_play(n_repetitions=3)
 
     opponents = []
-    results = run_tournament([GroupN_Negotiator] + opponents, n_repetitions=5)
+    results = run_tournament([Group68_Negotiator] + opponents, n_repetitions=5)
     metrics = compute_metrics(results)
     print("Metrics:", metrics)
     plot_results(results, save_path="results.png")
