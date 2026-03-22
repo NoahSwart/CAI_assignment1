@@ -34,6 +34,8 @@ class OpponentModel:
     # More frequent values are assumed more important to the opponent, 
     # so we can assign higher utility to outcomes containing those values.
     def get_estimated_utility(self, outcome: Outcome) -> float:
+        # weights estimated equally for simplicity, but might change to dynamic (as in slides)
+        
         if self.total_offers == 0:
             return 0.0
 
@@ -58,9 +60,11 @@ class OpponentModel:
         if len(self.times) < 2:
             return None
 
+        # linear regression
         times = np.array(self.times)
         utils = np.array(self.estimated_utilities)
 
+        # getting the slope (a*t + b --> we're finding a)
         slope = np.polyfit(times, utils, 1)[0]
 
         return slope
@@ -70,7 +74,9 @@ class OpponentModel:
     def is_opponent_conceding(self) -> bool:
         rate = self.get_concession_rate()
 
+
         if rate is None:
             return False
 
+        # if the estimated util of opponent offers is decreasing they're conceding
         return rate < 0
