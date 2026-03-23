@@ -59,6 +59,9 @@ class OpponentModel:
         utility = 0.0
         num_issues = len(outcome)
 
+        if num_issues == 0:
+            return 0.0
+
         for issue, value in zip(self.nmi.issues, outcome):
             count = self.value_counts[issue][value]
 
