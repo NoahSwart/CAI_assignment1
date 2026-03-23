@@ -1,0 +1,229 @@
+ToughNegotiator_rep_1:
+  t=0.048 | step=0 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.095 | step=1 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.143 | step=2 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.190 | step=3 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.238 | step=4 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.286 | step=5 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.333 | step=6 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.381 | step=7 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.429 | step=8 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.476 | step=9 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.524 | step=10 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.571 | step=11 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.619 | step=12 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.667 | step=13 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.714 | step=14 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.762 | step=15 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.810 | step=16 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.857 | step=17 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.905 | step=18 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.952 | step=19 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+
+
+ToughNegotiator_rep_2:
+  t=0.048 | step=0 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.095 | step=1 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.143 | step=2 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.190 | step=3 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.238 | step=4 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.286 | step=5 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.333 | step=6 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.381 | step=7 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.429 | step=8 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.476 | step=9 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.524 | step=10 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.571 | step=11 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.619 | step=12 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.667 | step=13 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.714 | step=14 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.762 | step=15 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.810 | step=16 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.857 | step=17 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.905 | step=18 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.952 | step=19 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+
+
+ToughNegotiator_rep_3:
+  t=0.048 | step=0 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.095 | step=1 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.143 | step=2 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.190 | step=3 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.238 | step=4 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.286 | step=5 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.333 | step=6 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.381 | step=7 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.429 | step=8 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.476 | step=9 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.524 | step=10 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.571 | step=11 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.619 | step=12 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.667 | step=13 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.714 | step=14 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.762 | step=15 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.810 | step=16 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.857 | step=17 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.905 | step=18 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.952 | step=19 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+
+
+ToughNegotiator_rep_4:
+  t=0.048 | step=0 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.095 | step=1 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.143 | step=2 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.190 | step=3 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.238 | step=4 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.286 | step=5 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.333 | step=6 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.381 | step=7 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.429 | step=8 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.476 | step=9 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.524 | step=10 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.571 | step=11 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.619 | step=12 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.667 | step=13 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.714 | step=14 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.762 | step=15 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.810 | step=16 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.857 | step=17 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.905 | step=18 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.952 | step=19 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+
+
+ToughNegotiator_rep_5:
+  t=0.048 | step=0 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.095 | step=1 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.143 | step=2 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.190 | step=3 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.238 | step=4 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.286 | step=5 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.333 | step=6 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.381 | step=7 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.429 | step=8 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.476 | step=9 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.524 | step=10 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.571 | step=11 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.619 | step=12 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.667 | step=13 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.714 | step=14 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.762 | step=15 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.810 | step=16 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.857 | step=17 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.905 | step=18 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.952 | step=19 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+
+
+ToughNegotiator_rep_6:
+  t=0.048 | step=0 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.095 | step=1 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.143 | step=2 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.190 | step=3 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.238 | step=4 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.286 | step=5 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.333 | step=6 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.381 | step=7 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.429 | step=8 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.476 | step=9 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.524 | step=10 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.571 | step=11 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.619 | step=12 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.667 | step=13 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.714 | step=14 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.762 | step=15 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.810 | step=16 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.857 | step=17 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.905 | step=18 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.952 | step=19 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+
+
+ToughNegotiator_rep_7:
+  t=0.048 | step=0 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.095 | step=1 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.143 | step=2 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.190 | step=3 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.238 | step=4 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.286 | step=5 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.333 | step=6 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.381 | step=7 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.429 | step=8 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.476 | step=9 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.524 | step=10 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.571 | step=11 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.619 | step=12 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.667 | step=13 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.714 | step=14 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.762 | step=15 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.810 | step=16 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.857 | step=17 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.905 | step=18 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.952 | step=19 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+
+
+ToughNegotiator_rep_8:
+  t=0.048 | step=0 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.095 | step=1 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.143 | step=2 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.190 | step=3 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.238 | step=4 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.286 | step=5 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.333 | step=6 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.381 | step=7 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.429 | step=8 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.476 | step=9 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.524 | step=10 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.571 | step=11 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.619 | step=12 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.667 | step=13 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.714 | step=14 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.762 | step=15 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.810 | step=16 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.857 | step=17 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.905 | step=18 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.952 | step=19 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+
+
+ToughNegotiator_rep_9:
+  t=0.048 | step=0 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.095 | step=1 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.143 | step=2 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.190 | step=3 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.238 | step=4 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.286 | step=5 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.333 | step=6 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.381 | step=7 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.429 | step=8 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.476 | step=9 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.524 | step=10 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.571 | step=11 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.619 | step=12 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.667 | step=13 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.714 | step=14 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.762 | step=15 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.810 | step=16 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.857 | step=17 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.905 | step=18 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.952 | step=19 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+
+
+ToughNegotiator_rep_10:
+  t=0.048 | step=0 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.095 | step=1 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.143 | step=2 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.190 | step=3 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.238 | step=4 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.286 | step=5 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.333 | step=6 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.381 | step=7 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.429 | step=8 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.476 | step=9 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.524 | step=10 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.571 | step=11 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.619 | step=12 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.667 | step=13 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.714 | step=14 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.762 | step=15 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.810 | step=16 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.857 | step=17 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.905 | step=18 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.952 | step=19 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+

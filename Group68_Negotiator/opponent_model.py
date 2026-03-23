@@ -6,6 +6,10 @@ import numpy as np
 
 
 class OpponentModel:
+    STYLE_MIN_OFFERS = 4
+    HARDLINER_SLOPE_THRESHOLD = -0.03
+    CONCEDER_SLOPE_THRESHOLD = -0.18
+    LATE_CONCEDER_SLOPE_THRESHOLD = -0.08
 
     # These are the parameters to initialize our opponent model, helping the other two functions to make decisions.
     def __init__(self, negotiatorMechanism: NegotiatorMechanismInterface):
@@ -76,18 +80,45 @@ class OpponentModel:
     # Build utility over time and compute a trend (like slope of linear fit or some others they mention).
     # Positive value -> opponent is conceding, Negative value -> opponent is holding firm.
     # Return none if not enough data.
-    def get_concession_rate(self) -> Optional[float]:
+    def get_concession_rate(self, window: Optional[int] = None) -> Optional[float]:
         if len(self.times) < 2:
             return None
 
-        # linear regression
-        times = np.array(self.times)
-        utils = np.array(self.estimated_utilities)
+        if window is not None and window > 1:
+            times = np.array(self.times[-window:])
+            utils = np.array(self.estimated_utilities[-window:])
+        else:
+            times = np.array(self.times)
+            utils = np.array(self.estimated_utilities)
 
+        # linear regression
         # getting the slope (a*t + b --> we're finding a)
         slope = np.polyfit(times, utils, 1)[0]
 
         return slope
+
+    def get_opponent_style(self) -> str:
+        if self.total_offers < self.STYLE_MIN_OFFERS:
+            return "unknown"
+
+        overall_rate = self.get_concession_rate()
+        recent_window = min(6, len(self.times))
+        recent_rate = self.get_concession_rate(window=recent_window)
+        current_time = float(self.times[-1]) if self.times else 0.0
+
+        if overall_rate is None or recent_rate is None:
+            return "unknown"
+
+        if recent_rate <= self.CONCEDER_SLOPE_THRESHOLD:
+            return "conceder"
+
+        if overall_rate >= self.HARDLINER_SLOPE_THRESHOLD:
+            return "hardliner"
+
+        if current_time >= 0.60 and recent_rate <= self.LATE_CONCEDER_SLOPE_THRESHOLD:
+            return "late_conceder"
+
+        return "unknown"
 
     # T if opponent appears to be conceding, otherwise F. 
     # Use the function above to make decision.
