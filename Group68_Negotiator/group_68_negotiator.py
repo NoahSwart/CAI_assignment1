@@ -15,8 +15,8 @@ class Group68_Negotiator(SAONegotiator):
     def on_negotiation_start(self, state: SAOState) -> None:
         super().on_negotiation_start(state)
         self.acceptance_strategy = AcceptanceStrategy(self.nmi, self.ufun)
-        self.bidding_strategy = BiddingStrategy(self.nmi, self.ufun)
         self.opponent_model = OpponentModel(self.nmi)
+        self.bidding_strategy = BiddingStrategy(self.nmi, self.ufun, self.opponent_model)
         self._fallback_best_offer = self.ufun.best() if self.ufun is not None else None
 
     # Return the nexxt offer to send to the opponent, which we call when we need to make a bid.
