@@ -23,7 +23,7 @@ class OpponentModel:
     def update(self, offer: Outcome, t: float) -> None:
         self.total_offers += 1
 
-        for issue, value in offer.items():
+        for issue, value in zip(self.nmi.issues, offer):
             self.value_counts[issue][value] += 1
 
         est_util = self.get_estimated_utility(offer)
@@ -42,7 +42,7 @@ class OpponentModel:
         utility = 0.0
         num_issues = len(outcome)
 
-        for issue, value in outcome.items():
+        for issue, value in zip(self.nmi.issues, outcome):
             count = self.value_counts[issue][value]
 
             value_score = count / self.total_offers
