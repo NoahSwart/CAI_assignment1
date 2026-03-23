@@ -17,13 +17,30 @@ class OpponentModel:
         self.times = []
         self.estimated_utilities = []
 
+    # Made this since the items() does not always give the same format
+    def _offer_items(self, offer: Outcome):
+        if hasattr(offer, "items"):
+            return list(offer.items())
+
+        if isinstance(offer, (tuple, list)):
+            issue_names = []
+            if hasattr(self.nmi, "outcome_space") and hasattr(self.nmi.outcome_space, "issues"):
+                issue_names = [issue.name for issue in self.nmi.outcome_space.issues]
+
+            if len(issue_names) == len(offer):
+                return list(zip(issue_names, offer))
+
+            return list(enumerate(offer))
+
+        return []
+
     # Update model with opponents latest offer, which we call evertume opponent makes a bid.
     # Track frequency of values offered. Track time of offers to estimate concession rate.
     # Update frequency counts for each issue-value pair in the offer.
     def update(self, offer: Outcome, t: float) -> None:
         self.total_offers += 1
 
-        for issue, value in offer.items():
+        for issue, value in self._offer_items(offer):
             self.value_counts[issue][value] += 1
 
         est_util = self.get_estimated_utility(offer)
@@ -40,9 +57,13 @@ class OpponentModel:
             return 0.0
 
         utility = 0.0
-        num_issues = len(outcome)
+        offer_items = self._offer_items(outcome)
+        num_issues = len(offer_items)
 
-        for issue, value in outcome.items():
+        if num_issues == 0:
+            return 0.0
+
+        for issue, value in offer_items:
             count = self.value_counts[issue][value]
 
             value_score = count / self.total_offers
