@@ -7,6 +7,13 @@ import matplotlib.pyplot as plt
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
 from negmas import make_issue, SAOMechanism
+from negmas.sao import (
+    AspirationNegotiator,
+    BoulwareTBNegotiator,
+    ConcederTBNegotiator,
+    RandomNegotiator,
+    ToughNegotiator,
+)
 from negmas.preferences import LinearAdditiveUtilityFunction as UFun                                                                         
 from negmas.preferences.value_fun import AffineFun                                                                                           
 from Group68_Negotiator.utils import outcome_utility, nash_product 
@@ -127,7 +134,7 @@ def plot_results(results: pd.DataFrame, save_path: str = "results.png"):
     # Extra metric
     results["social_welfare"] = results["our_utility"] + results["opp_utility"]
     # Average results per opponent
-    summary = results.groupby("opponent").mean()
+    summary = results.groupby("opponent").mean(numeric_only=True)
     fig, axes = plt.subplots(2, 2, figsize=(12, 8))
 
     # Agreement rate
@@ -154,8 +161,18 @@ def plot_results(results: pd.DataFrame, save_path: str = "results.png"):
 if __name__ == "__main__":
     run_self_play(n_repetitions=3)
 
-    opponents = []
-    results = run_tournament([Group68_Negotiator] + opponents, n_repetitions=5)
+    opponents = [
+        AspirationNegotiator,
+        BoulwareTBNegotiator,
+        ConcederTBNegotiator,
+        RandomNegotiator,
+        ToughNegotiator,
+    ]
+    results = run_tournament([Group68_Negotiator] + opponents, n_repetitions=10)
     metrics = compute_metrics(results)
     print("Metrics:", metrics)
+    results_path = "tournament_results.csv"
+    results.to_csv(results_path, index=False)
+    print(f"Saved detailed results to {results_path}")
     plot_results(results, save_path="results.png")
+    print("Saved plot to results.png")

@@ -1,3 +1,7 @@
 __pycache__/
 .vscode/
 workspace/
+results.png
+tmp_inspect_bs.py
+tmp_trace.py
+tournament_results.csv
