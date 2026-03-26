@@ -26,14 +26,16 @@ mechanism = SAOMechanism(issues=issues, n_steps=30)
 buyer_ufun = LUFun(
     values=[AffineFun(-1, 49)],   # utility = -price + 49
     weights=[1.0],
-    issues=issues
+    issues=issues,
+    reserved_value=34.0,
 )
 
 # Seller prefers HIGHER price
 seller_ufun = LUFun(
     values=[AffineFun(1, 0)],     # utility = price
     weights=[1.0],
-    issues=issues
+    issues=issues,
+    reserved_value=12.0,
 )
 
 

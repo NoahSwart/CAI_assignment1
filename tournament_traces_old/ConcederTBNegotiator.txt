@@ -1,0 +1,49 @@
+ConcederTBNegotiator_rep_1:
+  t=0.048 | step=0 | price=5 | proposer=opponent | our_u=4.00 | opp_u=5.00 | AGREEMENT
+  t=0.095 | step=1 | price=5 | proposer=opponent | our_u=4.00 | opp_u=5.00 | AGREEMENT
+
+
+ConcederTBNegotiator_rep_2:
+  t=0.048 | step=0 | price=5 | proposer=opponent | our_u=4.00 | opp_u=5.00 | AGREEMENT
+  t=0.095 | step=1 | price=5 | proposer=opponent | our_u=4.00 | opp_u=5.00 | AGREEMENT
+
+
+ConcederTBNegotiator_rep_3:
+  t=0.048 | step=0 | price=5 | proposer=opponent | our_u=4.00 | opp_u=5.00 | AGREEMENT
+  t=0.095 | step=1 | price=5 | proposer=opponent | our_u=4.00 | opp_u=5.00 | AGREEMENT
+
+
+ConcederTBNegotiator_rep_4:
+  t=0.048 | step=0 | price=5 | proposer=opponent | our_u=4.00 | opp_u=5.00 | AGREEMENT
+  t=0.095 | step=1 | price=5 | proposer=opponent | our_u=4.00 | opp_u=5.00 | AGREEMENT
+
+
+ConcederTBNegotiator_rep_5:
+  t=0.048 | step=0 | price=5 | proposer=opponent | our_u=4.00 | opp_u=5.00 | AGREEMENT
+  t=0.095 | step=1 | price=5 | proposer=opponent | our_u=4.00 | opp_u=5.00 | AGREEMENT
+
+
+ConcederTBNegotiator_rep_6:
+  t=0.048 | step=0 | price=5 | proposer=opponent | our_u=4.00 | opp_u=5.00 | AGREEMENT
+  t=0.095 | step=1 | price=5 | proposer=opponent | our_u=4.00 | opp_u=5.00 | AGREEMENT
+
+
+ConcederTBNegotiator_rep_7:
+  t=0.048 | step=0 | price=5 | proposer=opponent | our_u=4.00 | opp_u=5.00 | AGREEMENT
+  t=0.095 | step=1 | price=5 | proposer=opponent | our_u=4.00 | opp_u=5.00 | AGREEMENT
+
+
+ConcederTBNegotiator_rep_8:
+  t=0.048 | step=0 | price=5 | proposer=opponent | our_u=4.00 | opp_u=5.00 | AGREEMENT
+  t=0.095 | step=1 | price=5 | proposer=opponent | our_u=4.00 | opp_u=5.00 | AGREEMENT
+
+
+ConcederTBNegotiator_rep_9:
+  t=0.048 | step=0 | price=5 | proposer=opponent | our_u=4.00 | opp_u=5.00 | AGREEMENT
+  t=0.095 | step=1 | price=5 | proposer=opponent | our_u=4.00 | opp_u=5.00 | AGREEMENT
+
+
+ConcederTBNegotiator_rep_10:
+  t=0.048 | step=0 | price=5 | proposer=opponent | our_u=4.00 | opp_u=5.00 | AGREEMENT
+  t=0.095 | step=1 | price=5 | proposer=opponent | our_u=4.00 | opp_u=5.00 | AGREEMENT
+

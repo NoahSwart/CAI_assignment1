@@ -1,0 +1,47 @@
+RandomNegotiator_rep_1:
+  t=0.048 | step=0 | price=0 | proposer=our_agent | our_u=9.00 | opp_u=0.00 | AGREEMENT
+
+
+RandomNegotiator_rep_2:
+  t=0.048 | step=0 | price=0 | proposer=our_agent | our_u=9.00 | opp_u=0.00
+
+
+RandomNegotiator_rep_3:
+  t=0.048 | step=0 | price=3 | proposer=opponent | our_u=6.00 | opp_u=3.00 | AGREEMENT
+  t=0.095 | step=1 | price=3 | proposer=opponent | our_u=6.00 | opp_u=3.00 | AGREEMENT
+
+
+RandomNegotiator_rep_4:
+  t=0.048 | step=0 | price=0 | proposer=opponent | our_u=9.00 | opp_u=0.00 | AGREEMENT
+  t=0.095 | step=1 | price=0 | proposer=opponent | our_u=9.00 | opp_u=0.00 | AGREEMENT
+
+
+RandomNegotiator_rep_5:
+  t=0.048 | step=0 | price=9 | proposer=opponent | our_u=0.00 | opp_u=9.00
+  t=0.095 | step=1 | price=0 | proposer=our_agent | our_u=9.00 | opp_u=0.00 | AGREEMENT
+
+
+RandomNegotiator_rep_6:
+  t=0.048 | step=0 | price=3 | proposer=opponent | our_u=6.00 | opp_u=3.00 | AGREEMENT
+  t=0.095 | step=1 | price=3 | proposer=opponent | our_u=6.00 | opp_u=3.00 | AGREEMENT
+
+
+RandomNegotiator_rep_7:
+  t=0.048 | step=0 | price=7 | proposer=opponent | our_u=2.00 | opp_u=7.00 | AGREEMENT
+  t=0.095 | step=1 | price=7 | proposer=opponent | our_u=2.00 | opp_u=7.00 | AGREEMENT
+
+
+RandomNegotiator_rep_8:
+  t=0.048 | step=0 | price=2 | proposer=opponent | our_u=7.00 | opp_u=2.00 | AGREEMENT
+  t=0.095 | step=1 | price=2 | proposer=opponent | our_u=7.00 | opp_u=2.00 | AGREEMENT
+
+
+RandomNegotiator_rep_9:
+  t=0.048 | step=0 | price=7 | proposer=opponent | our_u=2.00 | opp_u=7.00 | AGREEMENT
+  t=0.095 | step=1 | price=7 | proposer=opponent | our_u=2.00 | opp_u=7.00 | AGREEMENT
+
+
+RandomNegotiator_rep_10:
+  t=0.048 | step=0 | price=1 | proposer=opponent | our_u=8.00 | opp_u=1.00 | AGREEMENT
+  t=0.095 | step=1 | price=1 | proposer=opponent | our_u=8.00 | opp_u=1.00 | AGREEMENT
+
