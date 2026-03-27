@@ -22,7 +22,7 @@ def outcome_utility(ufun: UtilityFunction, outcome: Optional[Outcome]) -> float:
 
 # helper to check if the outcomes utility is above reservation value.
 def is_above_reservation(ufun: UtilityFunction, outcome: Optional[Outcome]) -> bool:
-    return outcome_utility(ufun, outcome) > float(ufun.reserved_value)
+    return outcome_utility(ufun, outcome) >= float(ufun.reserved_value)
 
 # How far is our outcome from the Pareto frontier.
 # pareto_frontier is a list of (our_util, opponent_util) tuples.

@@ -17,6 +17,10 @@ class BiddingStrategy:
     LATE_MIN_SPAN_FRACTION = 0.45
     HARDLINER_LATE_MIN_SPAN_FRACTION = 0.55
     CONCEDER_LATE_MIN_SPAN_FRACTION = 0.40
+    DEADLINE_MIN_SPAN_FRACTION = 0.0
+    HARDLINER_DEADLINE_MIN_SPAN_FRACTION = 0.06
+    CONCEDER_DEADLINE_MIN_SPAN_FRACTION = 0.0
+    ENDGAME_CONCESSION_BOOST = 0.50
 
     # These are the parameters to initialize our bidding strategy, helping the other two functions to make decisions.
     # We should pre sort by our utility (desc) to help get_bid() find a bid near our target utility efficiently.
@@ -146,19 +150,26 @@ class BiddingStrategy:
     def _late_utility_floor(self, t: float) -> float:
         t = min(1.0, max(0.0, float(t)))
         span = max(0.0, self._max_utility - self._reserved)
-        span_fraction = self.LATE_MIN_SPAN_FRACTION
+        start_fraction = self.LATE_MIN_SPAN_FRACTION
+        deadline_fraction = self.DEADLINE_MIN_SPAN_FRACTION
 
         if self.opponent_model is not None:
             style = self.opponent_model.get_opponent_style()
             if style == "hardliner":
-                span_fraction = self.HARDLINER_LATE_MIN_SPAN_FRACTION
+                start_fraction = self.HARDLINER_LATE_MIN_SPAN_FRACTION
+                deadline_fraction = self.HARDLINER_DEADLINE_MIN_SPAN_FRACTION
             elif style == "conceder":
-                span_fraction = self.CONCEDER_LATE_MIN_SPAN_FRACTION
+                start_fraction = self.CONCEDER_LATE_MIN_SPAN_FRACTION
+                deadline_fraction = self.CONCEDER_DEADLINE_MIN_SPAN_FRACTION
 
-        if t >= 0.95:
-            span_fraction -= 0.08
+        if t <= self.LATE_BIDDING_TIME:
+            span_fraction = start_fraction
+        else:
+            late_progress = (t - self.LATE_BIDDING_TIME) / (1.0 - self.LATE_BIDDING_TIME)
+            late_progress = min(1.0, max(0.0, late_progress))
+            span_fraction = start_fraction + late_progress * (deadline_fraction - start_fraction)
 
-        span_fraction = min(0.75, max(0.30, span_fraction))
+        span_fraction = min(start_fraction, max(deadline_fraction, span_fraction))
         return self._reserved + span_fraction * span
 
     # Our strategy, returning the minimum utility we are willing to bid at time t in [0, 1].
@@ -173,6 +184,15 @@ class BiddingStrategy:
         exponent = self._adaptive_concession_exponent()
         concession = t ** exponent
         target = self._max_utility - concession * (self._max_utility - self._reserved)
+
+        if t >= self.LATE_BIDDING_TIME:
+            late_progress = (t - self.LATE_BIDDING_TIME) / (1.0 - self.LATE_BIDDING_TIME)
+            late_progress = min(1.0, max(0.0, late_progress))
+            distance_from_reservation = target - self._reserved
+            target = self._reserved + distance_from_reservation * (
+                1.0 - self.ENDGAME_CONCESSION_BOOST * late_progress
+            )
+
         return max(self._reserved, min(self._max_utility, target))
     
     # This is where we return the next bid we want to propse at time t.
