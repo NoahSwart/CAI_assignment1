@@ -21,6 +21,8 @@ from negmas.preferences.value_fun import AffineFun
 from Group68_Negotiator.utils import outcome_utility, nash_product 
 from Group68_Negotiator.group_68_negotiator import Group68_Negotiator
 
+from Opponents.chargingboul_bayes import ChargingBayes
+
 #Helper to create utility functions
 def create_uFun(issues):
     buyer_ufun = UFun(values=[AffineFun(-1, 9)], weights=[1.0], issues=issues, reserved_value=0.0)
@@ -316,6 +318,7 @@ if __name__ == "__main__":
         ConcederTBNegotiator,
         RandomNegotiator,
         ToughNegotiator,
+        ChargingBayes
     ]
     results, trace = run_tournament([Group68_Negotiator] + opponents, n_repetitions=10, return_trace=True)
     metrics = compute_metrics(results)
