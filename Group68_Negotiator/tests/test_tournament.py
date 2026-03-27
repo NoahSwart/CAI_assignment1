@@ -492,6 +492,8 @@ if __name__ == "__main__":
         NaiveTitForTatNegotiator,
         LinearTBNegotiator,
         NiceNegotiator,
+        Atlas3,
+        AgentK,
     ]
     results, trace = run_tournament(
         [Group68_Negotiator] + opponents,
