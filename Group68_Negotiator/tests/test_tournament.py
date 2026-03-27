@@ -21,7 +21,7 @@ from negmas.sao import (
 )
 
 from Group68_Negotiator.group_68_negotiator import Group68_Negotiator
-from Group68_Negotiator.utils import nash_product, outcome_utility
+from Group68_Negotiator.utils import nash_product, outcome_utility, pareto_distance
 from Opponents.chargingboul_bayes import ChargingBayes
 
 
@@ -203,6 +203,7 @@ def run_tournament(
         "agreement",
         "nash_product",
         "social_welfare",
+        "pareto_distance",
         "final_offer",
         "n_rounds",
         "match_id",
@@ -220,6 +221,24 @@ def run_tournament(
 
             for i in range(n_repetitions):
                 issues, buyer_ufun, seller_ufun, n_steps = domain_builder()
+
+                # Compute Pareto frontier for this domain
+                temp_mech = SAOMechanism(issues=issues, n_steps=n_steps)
+                all_outcomes = list(temp_mech.outcome_space.enumerate_or_sample())
+                pareto_frontier = []
+                for outcome in all_outcomes:
+                    our_u = float(buyer_ufun(outcome))
+                    opp_u = float(seller_ufun(outcome))
+                    is_dominated = False
+                    for other_outcome in all_outcomes:
+                        other_our = float(buyer_ufun(other_outcome))
+                        other_opp = float(seller_ufun(other_outcome))
+                        if other_our >= our_u and other_opp >= opp_u and (other_our > our_u or other_opp > opp_u):
+                            is_dominated = True
+                            break
+                    if not is_dominated:
+                        pareto_frontier.append((our_u, opp_u))
+
                 role_configs = [
                     ("our_buyer", buyer_ufun, seller_ufun),
                     ("our_seller", seller_ufun, buyer_ufun),
@@ -292,6 +311,7 @@ def run_tournament(
                                     float(opp_agent.ufun.reserved_value),
                                 ),
                                 "social_welfare": social_welfare,
+                                "pareto_distance": pareto_distance(our_utility, opp_utility, pareto_frontier) if agreement else float('inf'),
                                 "final_offer": None if agreement is None else json.dumps(list(agreement)),
                                 "n_rounds": len(history),
                                 "match_id": match_id,
@@ -314,17 +334,22 @@ def compute_metrics(results: pd.DataFrame) -> dict:
             "agreement_rate": 0.0,
             "avg_nash_product": 0.0,
             "avg_social_welfare": 0.0,
+            "avg_pareto_distance": 0.0,
         }
 
+    agreed = results[results["agreement"] == True]
     return {
         "avg_utility": float(results["our_utility"].mean()),
         "agreement_rate": float(results["agreement"].mean()),
         "avg_nash_product": float(results["nash_product"].mean()),
         "avg_social_welfare": float(results["social_welfare"].mean()),
+        "avg_pareto_distance": float(agreed["pareto_distance"].mean()) if len(agreed) > 0 else float('inf'),
     }
 
 
 def summarize_results(results: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
+    agreed = results[results["agreement"] == True]
+
     by_domain_opponent = (
         results.groupby(["domain", "opponent"])
         .agg(
@@ -340,6 +365,14 @@ def summarize_results(results: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame
         .reset_index()
     )
 
+    # Add pareto distance for agreements only
+    pareto_by_group = agreed.groupby(["domain", "opponent"])["pareto_distance"].mean().round(3)
+    by_domain_opponent = by_domain_opponent.merge(
+        pareto_by_group.rename("avg_pareto_distance"),
+        on=["domain", "opponent"],
+        how="left"
+    )
+
     by_domain = (
         results.groupby("domain")
         .agg(
@@ -352,6 +385,14 @@ def summarize_results(results: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame
         )
         .round(3)
         .reset_index()
+    )
+
+    # Add pareto distance for agreements only
+    pareto_by_domain = agreed.groupby("domain")["pareto_distance"].mean().round(3)
+    by_domain = by_domain.merge(
+        pareto_by_domain.rename("avg_pareto_distance"),
+        on="domain",
+        how="left"
     )
 
     return by_domain_opponent, by_domain
