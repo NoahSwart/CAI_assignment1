@@ -22,6 +22,7 @@ from negmas.sao import (
 
 from Group68_Negotiator.group_68_negotiator import Group68_Negotiator
 from Group68_Negotiator.utils import nash_product, outcome_utility
+from Opponents.chargingboul_bayes import ChargingBayes
 
 
 DomainBuilder = Callable[[], tuple[list, UFun, UFun, int]]
@@ -443,6 +444,7 @@ if __name__ == "__main__":
         ConcederTBNegotiator,
         RandomNegotiator,
         ToughNegotiator,
+        ChargingBayes,
     ]
     results, trace = run_tournament(
         [Group68_Negotiator] + opponents,

@@ -9,11 +9,11 @@ from Group68_Negotiator.opponent_model import OpponentModel
 
 class AcceptanceStrategy:
     # Concession speed in AC_time threshold. Higher => hold out longer for better offers.
-    DEFAULT_BETA = 4.0
+    BETA = 4.0
     # Only apply best-seen heuristic late in the negotiation.
     BEST_SEEN_LATE_STAGE = 0.90
     # Offer must improve over previous best by at least this utility margin.
-    BEST_SEEN_IMPROVEMENT_MARGIN = 1.0
+    BEST_SEEN_IMPROVEMENT_MARGIN = 0.25
     # Offer must also remain close to current time-based threshold.
     BEST_SEEN_THRESHOLD_FRACTION = 0.95
     # Minimum utility lead over estimated opponent utility when using opponent-aware acceptance.
@@ -31,8 +31,10 @@ class AcceptanceStrategy:
         self.opponent_model = opponent_model
         self.reservation = float(self.uFun.reserved_value)
         best_outcome = self.uFun.best(self.nmi.outcome_space)
-        self.max_utility = float(self.uFun(best_outcome)) if best_outcome is not None else self.reservation
-        self.beta = self.DEFAULT_BETA
+        self.max_utility = self.reservation
+        if best_outcome is not None:
+            max_utility = float(self.uFun(best_outcome))
+            if max_utility > self.max_utility: self.max_utility = max_utility
 
     def _required_advantage(self, t: float) -> float:
         t = min(1.0, max(0.0, float(t)))
@@ -79,9 +81,9 @@ class AcceptanceStrategy:
     # We use AC_time + AC_asp with a Boulware like concession curve
     def acceptance_threshold(self, t: float) -> float:
         t = min(1.0, max(0.0, float(t)))
-        span = max(0.0, self.max_utility - self.reservation)
-        aspiration = self.reservation + span * (1 - math.pow(t, self.beta))
-        return max(self.reservation, min(self.max_utility, aspiration))
+        span = self.max_utility - self.reservation
+        aspiration = self.reservation + span * (1 - math.pow(t, self.BETA))
+        return min(self.max_utility, aspiration)
 
     # T -> accept offer, F -> reject offer. Our mechanism to decide whether to return T Or F.
     # We always reject offers below our reservation value.
@@ -94,33 +96,28 @@ class AcceptanceStrategy:
             return False
 
         threshold = self.acceptance_threshold(t)
-        if offer_utility >= threshold and self._is_opponent_favorable_enough(offer, offer_utility, t):
+        is_opponent_favorable = self._is_opponent_favorable_enough(offer, offer_utility, t)
+        if offer_utility >= threshold and is_opponent_favorable:
             return True
 
-        # Optional 1: Gradually lower threshold from 0% at the beginning to 10% near the deadline
-        # tau = 1 - t
-        # expected_future = threshold * (0.9 + 0.1 * tau)
-        # if offer_utility >= expected_future:
-        #     return True
-
-        # Optional 2: Accept anything slightly above reservation right before the deadline
+        # Optional 1: Accept anything slightly above reservation right before the deadline
         # if t > 0.95 and offer_utility >= self.reservation + 0.25 * self.reservation:
         #     return True
 
-        # Optional 3: Compare with best seen so far
+        # Compare with best seen so far
         previous_offers = [
             history_state.current_offer
             for history_state in self.nmi.history[:-1]
             if getattr(history_state, "current_offer", None) is not None
         ]
-        if previous_offers:
+        if (
+            previous_offers
+            and t >= self.BEST_SEEN_LATE_STAGE
+            and offer_utility >= self.BEST_SEEN_THRESHOLD_FRACTION * threshold
+            and is_opponent_favorable
+        ):
             best_seen = max(float(self.uFun(previous_offer)) for previous_offer in previous_offers)
-            if (
-                t >= self.BEST_SEEN_LATE_STAGE
-                and offer_utility >= best_seen + self.BEST_SEEN_IMPROVEMENT_MARGIN
-                and offer_utility >= self.BEST_SEEN_THRESHOLD_FRACTION * threshold
-                and self._is_opponent_favorable_enough(offer, offer_utility, t)
-            ):
+            if offer_utility >= best_seen + self.BEST_SEEN_IMPROVEMENT_MARGIN:
                 return True
 
         return False
