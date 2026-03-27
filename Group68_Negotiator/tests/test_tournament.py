@@ -18,6 +18,9 @@ from negmas.sao import (
     ConcederTBNegotiator,
     RandomNegotiator,
     ToughNegotiator,
+    NaiveTitForTatNegotiator,
+    LinearTBNegotiator,
+    NiceNegotiator,
 )
 
 from Group68_Negotiator.group_68_negotiator import Group68_Negotiator
@@ -445,6 +448,9 @@ if __name__ == "__main__":
         RandomNegotiator,
         ToughNegotiator,
         ChargingBayes,
+        NaiveTitForTatNegotiator,
+        LinearTBNegotiator,
+        NiceNegotiator,
     ]
     results, trace = run_tournament(
         [Group68_Negotiator] + opponents,
