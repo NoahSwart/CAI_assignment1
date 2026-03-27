@@ -7,7 +7,7 @@ import numpy as np
 
 class OpponentModel:
     STYLE_MIN_OFFERS = 4
-    HARDLINER_SLOPE_THRESHOLD = -0.03
+    HARDLINER_SLOPE_THRESHOLD = -0.05
     CONCEDER_SLOPE_THRESHOLD = -0.18
     LATE_CONCEDER_SLOPE_THRESHOLD = -0.08
     RECENCY_BASE = 0.5
@@ -52,6 +52,7 @@ class OpponentModel:
         self.total_offers += 1
         self.offer_history.append((offer, float(t)))
 
+        # Total of each value per issue
         for issue, value in zip(self.nmi.issues, offer):
             self.value_counts[issue][value] += 1
 
@@ -69,7 +70,6 @@ class OpponentModel:
     # so we can assign higher utility to outcomes containing those values.
     def get_estimated_utility(self, outcome: Outcome) -> float:
         # weights estimated equally for simplicity, but might change to dynamic (as in slides)
-        
         if self.total_offers == 0:
             return 0.0
 
@@ -79,6 +79,8 @@ class OpponentModel:
             return 0.0
         
         utility = 0.0
+
+        # weights for each issue
         issue_weights = self.get_issue_weights()
 
         for issue, value in zip(self.nmi.issues, outcome):
@@ -110,10 +112,11 @@ class OpponentModel:
 
         return value_weight / total_weight
     
-
-    # Method used to get dynamic issue weights based on how consistently one value is repeated
-    # and on how few distinct values the opponent uses for the issue.
-    # weight = dominance * stability
+    '''
+    Determines the weight of each issue based on how consistently one value appears (value frequency)
+    and on how much the issue changes (stability).
+    A weight would just be the value frequency multiplied by it's stability
+    '''
     def get_issue_weights(self) -> dict:
         num_issues = len(self.nmi.issues)
         if num_issues == 0:
@@ -125,8 +128,11 @@ class OpponentModel:
         raw_weights = {}
 
         for issue in self.nmi.issues:
+            # for each issue we get the amount of different 
+            # times a value of that issue shows up
             counts = self.value_counts[issue]
 
+            # if there are no counts we assign the issue a standard weight
             if not counts:
                 raw_weights[issue] = 1.0
                 continue
@@ -134,10 +140,14 @@ class OpponentModel:
             max_count = max(counts.values())
             distinct_values = len(counts)
 
-            dominance = max_count / self.total_offers
-            stability = 1.0 / distinct_values if distinct_values > 0 else 1.0
+            valueFrequency = max_count / self.total_offers
+             
+            if distinct_values > 0:
+                stability = 1.0 / distinct_values
+            else: 
+                stability = 1.0
 
-            raw_weights[issue] = dominance * stability
+            raw_weights[issue] = valueFrequency * stability
 
         total_weight = sum(raw_weights.values())
         if total_weight <= 0:
@@ -189,7 +199,7 @@ class OpponentModel:
         if recent_rate <= self.CONCEDER_SLOPE_THRESHOLD:
             return "conceder"
 
-        if overall_rate >= self.HARDLINER_SLOPE_THRESHOLD:
+        if recent_rate >= self.HARDLINER_SLOPE_THRESHOLD:
             return "hardliner"
 
         if current_time >= 0.60 and recent_rate <= self.LATE_CONCEDER_SLOPE_THRESHOLD:
