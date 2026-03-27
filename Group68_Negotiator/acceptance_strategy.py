@@ -10,14 +10,6 @@ from Group68_Negotiator.opponent_model import OpponentModel
 class AcceptanceStrategy:
     # Concession speed in AC_time threshold. Higher => hold out longer for better offers.
     BETA = 4.0
-    # Only apply best-seen heuristic late in the negotiation.
-    BEST_SEEN_LATE_STAGE = 0.90
-    # Offer must improve over previous best by at least this utility margin.
-    BEST_SEEN_IMPROVEMENT_MARGIN = 0.25
-    # Offer must also remain close to current time-based threshold.
-    BEST_SEEN_THRESHOLD_FRACTION = 0.95
-    # Minimum utility lead over estimated opponent utility when using opponent-aware acceptance.
-    ADVANTAGE_BASE = 0.45
 
     # These are the parameters to initialize our acceptance strategy, helping the other two functionsto make decisions.
     def __init__(
@@ -36,9 +28,10 @@ class AcceptanceStrategy:
             max_utility = float(self.uFun(best_outcome))
             if max_utility > self.max_utility: self.max_utility = max_utility
 
+    # Computes the utility advantage required from the opponent for it to be considered favorable 
     def _required_advantage(self, t: float) -> float:
         t = min(1.0, max(0.0, float(t)))
-        advantage = self.ADVANTAGE_BASE
+        advantage = 0.45
 
         if self.opponent_model is not None:
             style = self.opponent_model.get_opponent_style()
@@ -68,6 +61,9 @@ class AcceptanceStrategy:
 
         return max(0.20, advantage)
 
+    # Return true iff the opponent has a conceding behaviour
+    # or in a general manner is willing to offer us considerable utility
+    # or if we don't have information about the opponent
     def _is_opponent_favorable_enough(self, offer: Outcome, our_utility: float, t: float) -> bool:
         if self.opponent_model is None:
             return True
@@ -85,10 +81,13 @@ class AcceptanceStrategy:
         aspiration = self.reservation + span * (1 - math.pow(t, self.BETA))
         return min(self.max_utility, aspiration)
 
-    # T -> accept offer, F -> reject offer. Our mechanism to decide whether to return T Or F.
+    # T -> accept offer, F -> reject offer.
     # We always reject offers below our reservation value.
-    # We use AC_next, AC_time, AC_combi to make a hybrid.
-    # Saw these being used in: "Introduction to Automated Negotiation" by de Jonge.
+    # We use AC_next and AC_time to make a hybrid.
+    # Only accept if opponent is considered favorable.
+    # Use our acceptance threshold to check if an offer is acceptable.
+    # When in end of negociation, apply a best seen strategy,
+    # still checking if the offer is near our threshold
     def should_accept(self, offer: Outcome, t: float, state: SAOState) -> bool:
         offer_utility = float(self.uFun(offer))
 
@@ -100,11 +99,6 @@ class AcceptanceStrategy:
         if offer_utility >= threshold and is_opponent_favorable:
             return True
 
-        # Optional 1: Accept anything slightly above reservation right before the deadline
-        # if t > 0.95 and offer_utility >= self.reservation + 0.25 * self.reservation:
-        #     return True
-
-        # Compare with best seen so far
         previous_offers = [
             history_state.current_offer
             for history_state in self.nmi.history[:-1]
@@ -112,12 +106,12 @@ class AcceptanceStrategy:
         ]
         if (
             previous_offers
-            and t >= self.BEST_SEEN_LATE_STAGE
-            and offer_utility >= self.BEST_SEEN_THRESHOLD_FRACTION * threshold
+            and t >= 0.90
+            and offer_utility >= 0.95 * threshold
             and is_opponent_favorable
         ):
             best_seen = max(float(self.uFun(previous_offer)) for previous_offer in previous_offers)
-            if offer_utility >= best_seen + self.BEST_SEEN_IMPROVEMENT_MARGIN:
+            if offer_utility >= best_seen + 0.25:
                 return True
 
         return False
