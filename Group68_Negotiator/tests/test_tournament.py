@@ -21,6 +21,10 @@ from negmas.sao import (
     NaiveTitForTatNegotiator,
     LinearTBNegotiator,
     NiceNegotiator,
+    MiCRONegotiator,
+    CABNegotiator,
+    WABNegotiator,
+    SimpleTitForTatNegotiator,
 )
 
 from Group68_Negotiator.group_68_negotiator import Group68_Negotiator
@@ -492,8 +496,10 @@ if __name__ == "__main__":
         NaiveTitForTatNegotiator,
         LinearTBNegotiator,
         NiceNegotiator,
-        Atlas3,
-        AgentK,
+        MiCRONegotiator,
+        CABNegotiator,
+        WABNegotiator,
+        SimpleTitForTatNegotiator,
     ]
     results, trace = run_tournament(
         [Group68_Negotiator] + opponents,
