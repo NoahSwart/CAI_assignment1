@@ -62,14 +62,14 @@ class OpponentModel:
 
 
     # Gives more weight to recent offers
-    def _recency_weight(self, t: float) -> float:
+    def recency_weight(self, t: float) -> float:
         return self.RECENCY_BASE + (1.0 - self.RECENCY_BASE) * float(t)
 
-    # EStimate opponents utility for an outcome base on frequency of values offered.
+    # EStimate opponents utility for an outcome based on frequency of values offered.
     # More frequent values are assumed more important to the opponent, 
     # so we can assign higher utility to outcomes containing those values.
     def get_estimated_utility(self, outcome: Outcome) -> float:
-        # weights estimated equally for simplicity, but might change to dynamic (as in slides)
+
         if self.total_offers == 0:
             return 0.0
 
@@ -84,44 +84,54 @@ class OpponentModel:
         issue_weights = self.get_issue_weights()
 
         for issue, value in zip(self.nmi.issues, outcome):
-            value_score = self._get_value_score(issue, value)
+            value_score = self.get_value_score(issue, value)
             weight = issue_weights.get(issue, 0.0)
 
             utility += weight * value_score
 
         return utility
     
-    # Estimate for a specific issue-value pair. This way more recent offers will contribute more
-    def _get_value_score(self, issue, value) -> float:
+    # Returns an estimated preference score for a specific (issue, value) pair
+    # based on how frequently the opponent has offered this value.
+    # More recent offers are given higher importance.
+    def get_value_score(self, issue, value) -> float:
         if not self.offer_history:
             return 0.0
 
+        # Gets the index of this issue in the offer tuple
         idx = self.issue_index[issue]
+
         total_weight = 0.0
         value_weight = 0.0
 
+        # Iterate over all previous offers made by the opponent
         for offer, t in self.offer_history:
-            w = self._recency_weight(t)
+            w = self.recency_weight(t)
             total_weight += w
 
+            # If the value for this issue matches, add to the value-specific weight
             if idx < len(offer) and offer[idx] == value:
                 value_weight += w
 
+        # Just to makes sure we don't divide by zero
         if total_weight <= 0:
             return 0.0
 
         return value_weight / total_weight
     
-    '''
-    Determines the weight of each issue based on how consistently one value appears (value frequency)
-    and on how much the issue changes (stability).
-    A weight would just be the value frequency multiplied by it's stability
-    '''
+    
+    # Determines the weight of each issue based on how consistently one value appears (value frequency)
+    # and on how much the issue changes (stability).
+    # A weight would just be the value frequency multiplied by it's stability
     def get_issue_weights(self) -> dict:
         num_issues = len(self.nmi.issues)
+
+        # If there are no issues, we return an empty dictionary
         if num_issues == 0:
             return {}
 
+        # If we see that no offers have been observed yet, 
+        # we assume all issues are equally important
         if self.total_offers == 0:
             return {issue: 1.0 / num_issues for issue in self.nmi.issues}
 
@@ -136,10 +146,12 @@ class OpponentModel:
             if not counts:
                 raw_weights[issue] = 1.0
                 continue
-
+            
+            # we measures how strongly the opponent prefers a certain value
             max_count = max(counts.values())
             distinct_values = len(counts)
 
+            # we see how often the most common value appears relative to all offers
             valueFrequency = max_count / self.total_offers
              
             if distinct_values > 0:
@@ -148,7 +160,7 @@ class OpponentModel:
                 stability = 1.0
 
             raw_weights[issue] = valueFrequency * stability
-
+        
         total_weight = sum(raw_weights.values())
         if total_weight <= 0:
             return {issue: 1.0 / num_issues for issue in self.nmi.issues}
@@ -184,6 +196,8 @@ class OpponentModel:
 
         return float(slope)
 
+
+    # Determines what opponent we're facing based on the slope
     def get_opponent_style(self) -> str:
         if self.total_offers < self.STYLE_MIN_OFFERS:
             return "unknown"
@@ -207,8 +221,8 @@ class OpponentModel:
 
         return "unknown"
 
-    # T if opponent appears to be conceding, otherwise F. 
-    # Use the function above to make decision.
+    # True if opponent appears to be conceding, otherwise false. 
+    # Uses the get_concession_rate function to make decision the slope.
     def is_opponent_conceding(self) -> bool:
         rate = self.get_concession_rate()
 
