@@ -1,0 +1,301 @@
+domain,opponent,repetition,role,start_order,agreement,our_utility,opp_utility,nash_product,rounds,agreement_offer
+single_issue_10,AspirationNegotiator,1,our_buyer,our_first,True,4.0,5.0,20.0,18,[5]
+single_issue_10,AspirationNegotiator,1,our_buyer,our_second,True,6.0,3.0,18.0,19,[3]
+single_issue_10,AspirationNegotiator,1,our_seller,our_first,True,4.0,5.0,20.0,18,[4]
+single_issue_10,AspirationNegotiator,1,our_seller,our_second,True,6.0,3.0,18.0,19,[6]
+single_issue_10,AspirationNegotiator,2,our_buyer,our_first,True,4.0,5.0,20.0,18,[5]
+single_issue_10,AspirationNegotiator,2,our_buyer,our_second,True,6.0,3.0,18.0,19,[3]
+single_issue_10,AspirationNegotiator,2,our_seller,our_first,True,4.0,5.0,20.0,18,[4]
+single_issue_10,AspirationNegotiator,2,our_seller,our_second,True,6.0,3.0,18.0,19,[6]
+single_issue_10,AspirationNegotiator,3,our_buyer,our_first,True,4.0,5.0,20.0,18,[5]
+single_issue_10,AspirationNegotiator,3,our_buyer,our_second,True,6.0,3.0,18.0,19,[3]
+single_issue_10,AspirationNegotiator,3,our_seller,our_first,True,4.0,5.0,20.0,18,[4]
+single_issue_10,AspirationNegotiator,3,our_seller,our_second,True,6.0,3.0,18.0,19,[6]
+single_issue_10,AspirationNegotiator,4,our_buyer,our_first,True,4.0,5.0,20.0,18,[5]
+single_issue_10,AspirationNegotiator,4,our_buyer,our_second,True,6.0,3.0,18.0,19,[3]
+single_issue_10,AspirationNegotiator,4,our_seller,our_first,True,4.0,5.0,20.0,18,[4]
+single_issue_10,AspirationNegotiator,4,our_seller,our_second,True,6.0,3.0,18.0,19,[6]
+single_issue_10,AspirationNegotiator,5,our_buyer,our_first,True,4.0,5.0,20.0,18,[5]
+single_issue_10,AspirationNegotiator,5,our_buyer,our_second,True,6.0,3.0,18.0,19,[3]
+single_issue_10,AspirationNegotiator,5,our_seller,our_first,True,4.0,5.0,20.0,18,[4]
+single_issue_10,AspirationNegotiator,5,our_seller,our_second,True,6.0,3.0,18.0,19,[6]
+single_issue_10,BoulwareTBNegotiator,1,our_buyer,our_first,True,4.0,5.0,20.0,18,[5]
+single_issue_10,BoulwareTBNegotiator,1,our_buyer,our_second,True,6.0,3.0,18.0,19,[3]
+single_issue_10,BoulwareTBNegotiator,1,our_seller,our_first,True,4.0,5.0,20.0,18,[4]
+single_issue_10,BoulwareTBNegotiator,1,our_seller,our_second,True,6.0,3.0,18.0,19,[6]
+single_issue_10,BoulwareTBNegotiator,2,our_buyer,our_first,True,4.0,5.0,20.0,18,[5]
+single_issue_10,BoulwareTBNegotiator,2,our_buyer,our_second,True,6.0,3.0,18.0,19,[3]
+single_issue_10,BoulwareTBNegotiator,2,our_seller,our_first,True,4.0,5.0,20.0,18,[4]
+single_issue_10,BoulwareTBNegotiator,2,our_seller,our_second,True,6.0,3.0,18.0,19,[6]
+single_issue_10,BoulwareTBNegotiator,3,our_buyer,our_first,True,4.0,5.0,20.0,18,[5]
+single_issue_10,BoulwareTBNegotiator,3,our_buyer,our_second,True,6.0,3.0,18.0,19,[3]
+single_issue_10,BoulwareTBNegotiator,3,our_seller,our_first,True,4.0,5.0,20.0,18,[4]
+single_issue_10,BoulwareTBNegotiator,3,our_seller,our_second,True,6.0,3.0,18.0,19,[6]
+single_issue_10,BoulwareTBNegotiator,4,our_buyer,our_first,True,4.0,5.0,20.0,18,[5]
+single_issue_10,BoulwareTBNegotiator,4,our_buyer,our_second,True,6.0,3.0,18.0,19,[3]
+single_issue_10,BoulwareTBNegotiator,4,our_seller,our_first,True,4.0,5.0,20.0,18,[4]
+single_issue_10,BoulwareTBNegotiator,4,our_seller,our_second,True,6.0,3.0,18.0,19,[6]
+single_issue_10,BoulwareTBNegotiator,5,our_buyer,our_first,True,4.0,5.0,20.0,18,[5]
+single_issue_10,BoulwareTBNegotiator,5,our_buyer,our_second,True,6.0,3.0,18.0,19,[3]
+single_issue_10,BoulwareTBNegotiator,5,our_seller,our_first,True,4.0,5.0,20.0,18,[4]
+single_issue_10,BoulwareTBNegotiator,5,our_seller,our_second,True,6.0,3.0,18.0,19,[6]
+single_issue_10,ConcederTBNegotiator,1,our_buyer,our_first,True,8.0,1.0,8.0,14,[1]
+single_issue_10,ConcederTBNegotiator,1,our_buyer,our_second,True,8.0,1.0,8.0,14,[1]
+single_issue_10,ConcederTBNegotiator,1,our_seller,our_first,True,8.0,1.0,8.0,14,[8]
+single_issue_10,ConcederTBNegotiator,1,our_seller,our_second,True,8.0,1.0,8.0,14,[8]
+single_issue_10,ConcederTBNegotiator,2,our_buyer,our_first,True,8.0,1.0,8.0,14,[1]
+single_issue_10,ConcederTBNegotiator,2,our_buyer,our_second,True,8.0,1.0,8.0,14,[1]
+single_issue_10,ConcederTBNegotiator,2,our_seller,our_first,True,8.0,1.0,8.0,14,[8]
+single_issue_10,ConcederTBNegotiator,2,our_seller,our_second,True,8.0,1.0,8.0,14,[8]
+single_issue_10,ConcederTBNegotiator,3,our_buyer,our_first,True,8.0,1.0,8.0,14,[1]
+single_issue_10,ConcederTBNegotiator,3,our_buyer,our_second,True,8.0,1.0,8.0,14,[1]
+single_issue_10,ConcederTBNegotiator,3,our_seller,our_first,True,8.0,1.0,8.0,14,[8]
+single_issue_10,ConcederTBNegotiator,3,our_seller,our_second,True,8.0,1.0,8.0,14,[8]
+single_issue_10,ConcederTBNegotiator,4,our_buyer,our_first,True,8.0,1.0,8.0,14,[1]
+single_issue_10,ConcederTBNegotiator,4,our_buyer,our_second,True,8.0,1.0,8.0,14,[1]
+single_issue_10,ConcederTBNegotiator,4,our_seller,our_first,True,8.0,1.0,8.0,14,[8]
+single_issue_10,ConcederTBNegotiator,4,our_seller,our_second,True,8.0,1.0,8.0,14,[8]
+single_issue_10,ConcederTBNegotiator,5,our_buyer,our_first,True,8.0,1.0,8.0,14,[1]
+single_issue_10,ConcederTBNegotiator,5,our_buyer,our_second,True,8.0,1.0,8.0,14,[1]
+single_issue_10,ConcederTBNegotiator,5,our_seller,our_first,True,8.0,1.0,8.0,14,[8]
+single_issue_10,ConcederTBNegotiator,5,our_seller,our_second,True,8.0,1.0,8.0,14,[8]
+single_issue_10,RandomNegotiator,1,our_buyer,our_first,False,0.0,0.0,0.0,5,null
+single_issue_10,RandomNegotiator,1,our_buyer,our_second,False,0.0,0.0,0.0,6,null
+single_issue_10,RandomNegotiator,1,our_seller,our_first,True,9.0,0.0,0.0,2,[9]
+single_issue_10,RandomNegotiator,1,our_seller,our_second,True,9.0,0.0,0.0,2,[9]
+single_issue_10,RandomNegotiator,2,our_buyer,our_first,True,9.0,0.0,0.0,2,[0]
+single_issue_10,RandomNegotiator,2,our_buyer,our_second,True,9.0,0.0,0.0,1,[0]
+single_issue_10,RandomNegotiator,2,our_seller,our_first,False,0.0,0.0,0.0,1,null
+single_issue_10,RandomNegotiator,2,our_seller,our_second,True,9.0,0.0,0.0,5,[9]
+single_issue_10,RandomNegotiator,3,our_buyer,our_first,False,0.0,0.0,0.0,1,null
+single_issue_10,RandomNegotiator,3,our_buyer,our_second,False,0.0,0.0,0.0,2,null
+single_issue_10,RandomNegotiator,3,our_seller,our_first,True,9.0,0.0,0.0,2,[9]
+single_issue_10,RandomNegotiator,3,our_seller,our_second,True,9.0,0.0,0.0,3,[9]
+single_issue_10,RandomNegotiator,4,our_buyer,our_first,True,9.0,0.0,0.0,5,[0]
+single_issue_10,RandomNegotiator,4,our_buyer,our_second,True,9.0,0.0,0.0,1,[0]
+single_issue_10,RandomNegotiator,4,our_seller,our_first,True,9.0,0.0,0.0,1,[9]
+single_issue_10,RandomNegotiator,4,our_seller,our_second,False,0.0,0.0,0.0,3,null
+single_issue_10,RandomNegotiator,5,our_buyer,our_first,True,9.0,0.0,0.0,4,[0]
+single_issue_10,RandomNegotiator,5,our_buyer,our_second,True,9.0,0.0,0.0,4,[0]
+single_issue_10,RandomNegotiator,5,our_seller,our_first,True,9.0,0.0,0.0,2,[9]
+single_issue_10,RandomNegotiator,5,our_seller,our_second,False,0.0,0.0,0.0,3,null
+single_issue_10,ToughNegotiator,1,our_buyer,our_first,False,0.0,0.0,0.0,20,null
+single_issue_10,ToughNegotiator,1,our_buyer,our_second,False,0.0,0.0,0.0,20,null
+single_issue_10,ToughNegotiator,1,our_seller,our_first,False,0.0,0.0,0.0,20,null
+single_issue_10,ToughNegotiator,1,our_seller,our_second,False,0.0,0.0,0.0,20,null
+single_issue_10,ToughNegotiator,2,our_buyer,our_first,False,0.0,0.0,0.0,20,null
+single_issue_10,ToughNegotiator,2,our_buyer,our_second,False,0.0,0.0,0.0,20,null
+single_issue_10,ToughNegotiator,2,our_seller,our_first,False,0.0,0.0,0.0,20,null
+single_issue_10,ToughNegotiator,2,our_seller,our_second,False,0.0,0.0,0.0,20,null
+single_issue_10,ToughNegotiator,3,our_buyer,our_first,False,0.0,0.0,0.0,20,null
+single_issue_10,ToughNegotiator,3,our_buyer,our_second,False,0.0,0.0,0.0,20,null
+single_issue_10,ToughNegotiator,3,our_seller,our_first,False,0.0,0.0,0.0,20,null
+single_issue_10,ToughNegotiator,3,our_seller,our_second,False,0.0,0.0,0.0,20,null
+single_issue_10,ToughNegotiator,4,our_buyer,our_first,False,0.0,0.0,0.0,20,null
+single_issue_10,ToughNegotiator,4,our_buyer,our_second,False,0.0,0.0,0.0,20,null
+single_issue_10,ToughNegotiator,4,our_seller,our_first,False,0.0,0.0,0.0,20,null
+single_issue_10,ToughNegotiator,4,our_seller,our_second,False,0.0,0.0,0.0,20,null
+single_issue_10,ToughNegotiator,5,our_buyer,our_first,False,0.0,0.0,0.0,20,null
+single_issue_10,ToughNegotiator,5,our_buyer,our_second,False,0.0,0.0,0.0,20,null
+single_issue_10,ToughNegotiator,5,our_seller,our_first,False,0.0,0.0,0.0,20,null
+single_issue_10,ToughNegotiator,5,our_seller,our_second,False,0.0,0.0,0.0,20,null
+single_issue_50_overlap,AspirationNegotiator,1,our_buyer,our_first,False,34.0,12.0,0.0,30,null
+single_issue_50_overlap,AspirationNegotiator,1,our_buyer,our_second,False,34.0,12.0,0.0,30,null
+single_issue_50_overlap,AspirationNegotiator,1,our_seller,our_first,False,12.0,34.0,0.0,30,null
+single_issue_50_overlap,AspirationNegotiator,1,our_seller,our_second,False,12.0,34.0,0.0,30,null
+single_issue_50_overlap,AspirationNegotiator,2,our_buyer,our_first,False,34.0,12.0,0.0,30,null
+single_issue_50_overlap,AspirationNegotiator,2,our_buyer,our_second,False,34.0,12.0,0.0,30,null
+single_issue_50_overlap,AspirationNegotiator,2,our_seller,our_first,False,12.0,34.0,0.0,30,null
+single_issue_50_overlap,AspirationNegotiator,2,our_seller,our_second,False,12.0,34.0,0.0,30,null
+single_issue_50_overlap,AspirationNegotiator,3,our_buyer,our_first,False,34.0,12.0,0.0,30,null
+single_issue_50_overlap,AspirationNegotiator,3,our_buyer,our_second,False,34.0,12.0,0.0,30,null
+single_issue_50_overlap,AspirationNegotiator,3,our_seller,our_first,False,12.0,34.0,0.0,30,null
+single_issue_50_overlap,AspirationNegotiator,3,our_seller,our_second,False,12.0,34.0,0.0,30,null
+single_issue_50_overlap,AspirationNegotiator,4,our_buyer,our_first,False,34.0,12.0,0.0,30,null
+single_issue_50_overlap,AspirationNegotiator,4,our_buyer,our_second,False,34.0,12.0,0.0,30,null
+single_issue_50_overlap,AspirationNegotiator,4,our_seller,our_first,False,12.0,34.0,0.0,30,null
+single_issue_50_overlap,AspirationNegotiator,4,our_seller,our_second,False,12.0,34.0,0.0,30,null
+single_issue_50_overlap,AspirationNegotiator,5,our_buyer,our_first,False,34.0,12.0,0.0,30,null
+single_issue_50_overlap,AspirationNegotiator,5,our_buyer,our_second,False,34.0,12.0,0.0,30,null
+single_issue_50_overlap,AspirationNegotiator,5,our_seller,our_first,False,12.0,34.0,0.0,30,null
+single_issue_50_overlap,AspirationNegotiator,5,our_seller,our_second,False,12.0,34.0,0.0,30,null
+single_issue_50_overlap,BoulwareTBNegotiator,1,our_buyer,our_first,False,34.0,12.0,0.0,30,null
+single_issue_50_overlap,BoulwareTBNegotiator,1,our_buyer,our_second,False,34.0,12.0,0.0,30,null
+single_issue_50_overlap,BoulwareTBNegotiator,1,our_seller,our_first,False,12.0,34.0,0.0,30,null
+single_issue_50_overlap,BoulwareTBNegotiator,1,our_seller,our_second,False,12.0,34.0,0.0,30,null
+single_issue_50_overlap,BoulwareTBNegotiator,2,our_buyer,our_first,False,34.0,12.0,0.0,30,null
+single_issue_50_overlap,BoulwareTBNegotiator,2,our_buyer,our_second,False,34.0,12.0,0.0,30,null
+single_issue_50_overlap,BoulwareTBNegotiator,2,our_seller,our_first,False,12.0,34.0,0.0,30,null
+single_issue_50_overlap,BoulwareTBNegotiator,2,our_seller,our_second,False,12.0,34.0,0.0,30,null
+single_issue_50_overlap,BoulwareTBNegotiator,3,our_buyer,our_first,False,34.0,12.0,0.0,30,null
+single_issue_50_overlap,BoulwareTBNegotiator,3,our_buyer,our_second,False,34.0,12.0,0.0,30,null
+single_issue_50_overlap,BoulwareTBNegotiator,3,our_seller,our_first,False,12.0,34.0,0.0,30,null
+single_issue_50_overlap,BoulwareTBNegotiator,3,our_seller,our_second,False,12.0,34.0,0.0,30,null
+single_issue_50_overlap,BoulwareTBNegotiator,4,our_buyer,our_first,False,34.0,12.0,0.0,30,null
+single_issue_50_overlap,BoulwareTBNegotiator,4,our_buyer,our_second,False,34.0,12.0,0.0,30,null
+single_issue_50_overlap,BoulwareTBNegotiator,4,our_seller,our_first,False,12.0,34.0,0.0,30,null
+single_issue_50_overlap,BoulwareTBNegotiator,4,our_seller,our_second,False,12.0,34.0,0.0,30,null
+single_issue_50_overlap,BoulwareTBNegotiator,5,our_buyer,our_first,False,34.0,12.0,0.0,30,null
+single_issue_50_overlap,BoulwareTBNegotiator,5,our_buyer,our_second,False,34.0,12.0,0.0,30,null
+single_issue_50_overlap,BoulwareTBNegotiator,5,our_seller,our_first,False,12.0,34.0,0.0,30,null
+single_issue_50_overlap,BoulwareTBNegotiator,5,our_seller,our_second,False,12.0,34.0,0.0,30,null
+single_issue_50_overlap,ConcederTBNegotiator,1,our_buyer,our_first,True,36.0,13.0,2.0,29,[13]
+single_issue_50_overlap,ConcederTBNegotiator,1,our_buyer,our_second,True,36.0,13.0,2.0,30,[13]
+single_issue_50_overlap,ConcederTBNegotiator,1,our_seller,our_first,False,12.0,34.0,0.0,30,null
+single_issue_50_overlap,ConcederTBNegotiator,1,our_seller,our_second,False,12.0,34.0,0.0,30,null
+single_issue_50_overlap,ConcederTBNegotiator,2,our_buyer,our_first,True,36.0,13.0,2.0,29,[13]
+single_issue_50_overlap,ConcederTBNegotiator,2,our_buyer,our_second,True,36.0,13.0,2.0,30,[13]
+single_issue_50_overlap,ConcederTBNegotiator,2,our_seller,our_first,False,12.0,34.0,0.0,30,null
+single_issue_50_overlap,ConcederTBNegotiator,2,our_seller,our_second,False,12.0,34.0,0.0,30,null
+single_issue_50_overlap,ConcederTBNegotiator,3,our_buyer,our_first,True,36.0,13.0,2.0,29,[13]
+single_issue_50_overlap,ConcederTBNegotiator,3,our_buyer,our_second,True,36.0,13.0,2.0,30,[13]
+single_issue_50_overlap,ConcederTBNegotiator,3,our_seller,our_first,False,12.0,34.0,0.0,30,null
+single_issue_50_overlap,ConcederTBNegotiator,3,our_seller,our_second,False,12.0,34.0,0.0,30,null
+single_issue_50_overlap,ConcederTBNegotiator,4,our_buyer,our_first,True,36.0,13.0,2.0,29,[13]
+single_issue_50_overlap,ConcederTBNegotiator,4,our_buyer,our_second,True,36.0,13.0,2.0,30,[13]
+single_issue_50_overlap,ConcederTBNegotiator,4,our_seller,our_first,False,12.0,34.0,0.0,30,null
+single_issue_50_overlap,ConcederTBNegotiator,4,our_seller,our_second,False,12.0,34.0,0.0,30,null
+single_issue_50_overlap,ConcederTBNegotiator,5,our_buyer,our_first,True,36.0,13.0,2.0,29,[13]
+single_issue_50_overlap,ConcederTBNegotiator,5,our_buyer,our_second,True,36.0,13.0,2.0,30,[13]
+single_issue_50_overlap,ConcederTBNegotiator,5,our_seller,our_first,False,12.0,34.0,0.0,30,null
+single_issue_50_overlap,ConcederTBNegotiator,5,our_seller,our_second,False,12.0,34.0,0.0,30,null
+single_issue_50_overlap,RandomNegotiator,1,our_buyer,our_first,True,49.0,0.0,0.0,1,[0]
+single_issue_50_overlap,RandomNegotiator,1,our_buyer,our_second,False,34.0,12.0,0.0,3,null
+single_issue_50_overlap,RandomNegotiator,1,our_seller,our_first,False,12.0,34.0,0.0,6,null
+single_issue_50_overlap,RandomNegotiator,1,our_seller,our_second,True,49.0,0.0,0.0,6,[49]
+single_issue_50_overlap,RandomNegotiator,2,our_buyer,our_first,True,49.0,0.0,0.0,2,[0]
+single_issue_50_overlap,RandomNegotiator,2,our_buyer,our_second,False,34.0,12.0,0.0,3,null
+single_issue_50_overlap,RandomNegotiator,2,our_seller,our_first,True,49.0,0.0,0.0,5,[49]
+single_issue_50_overlap,RandomNegotiator,2,our_seller,our_second,True,49.0,0.0,0.0,4,[49]
+single_issue_50_overlap,RandomNegotiator,3,our_buyer,our_first,True,49.0,0.0,0.0,4,[0]
+single_issue_50_overlap,RandomNegotiator,3,our_buyer,our_second,True,49.0,0.0,0.0,4,[0]
+single_issue_50_overlap,RandomNegotiator,3,our_seller,our_first,False,12.0,34.0,0.0,1,null
+single_issue_50_overlap,RandomNegotiator,3,our_seller,our_second,True,48.0,1.0,0.0,10,[48]
+single_issue_50_overlap,RandomNegotiator,4,our_buyer,our_first,True,49.0,0.0,0.0,1,[0]
+single_issue_50_overlap,RandomNegotiator,4,our_buyer,our_second,True,49.0,0.0,0.0,5,[0]
+single_issue_50_overlap,RandomNegotiator,4,our_seller,our_first,False,12.0,34.0,0.0,2,null
+single_issue_50_overlap,RandomNegotiator,4,our_seller,our_second,True,49.0,0.0,0.0,3,[49]
+single_issue_50_overlap,RandomNegotiator,5,our_buyer,our_first,True,49.0,0.0,0.0,5,[0]
+single_issue_50_overlap,RandomNegotiator,5,our_buyer,our_second,False,34.0,12.0,0.0,4,null
+single_issue_50_overlap,RandomNegotiator,5,our_seller,our_first,True,49.0,0.0,0.0,6,[49]
+single_issue_50_overlap,RandomNegotiator,5,our_seller,our_second,True,49.0,0.0,0.0,2,[49]
+single_issue_50_overlap,ToughNegotiator,1,our_buyer,our_first,False,34.0,12.0,0.0,30,null
+single_issue_50_overlap,ToughNegotiator,1,our_buyer,our_second,False,34.0,12.0,0.0,30,null
+single_issue_50_overlap,ToughNegotiator,1,our_seller,our_first,False,12.0,34.0,0.0,30,null
+single_issue_50_overlap,ToughNegotiator,1,our_seller,our_second,False,12.0,34.0,0.0,30,null
+single_issue_50_overlap,ToughNegotiator,2,our_buyer,our_first,False,34.0,12.0,0.0,30,null
+single_issue_50_overlap,ToughNegotiator,2,our_buyer,our_second,False,34.0,12.0,0.0,30,null
+single_issue_50_overlap,ToughNegotiator,2,our_seller,our_first,False,12.0,34.0,0.0,30,null
+single_issue_50_overlap,ToughNegotiator,2,our_seller,our_second,False,12.0,34.0,0.0,30,null
+single_issue_50_overlap,ToughNegotiator,3,our_buyer,our_first,False,34.0,12.0,0.0,30,null
+single_issue_50_overlap,ToughNegotiator,3,our_buyer,our_second,False,34.0,12.0,0.0,30,null
+single_issue_50_overlap,ToughNegotiator,3,our_seller,our_first,False,12.0,34.0,0.0,30,null
+single_issue_50_overlap,ToughNegotiator,3,our_seller,our_second,False,12.0,34.0,0.0,30,null
+single_issue_50_overlap,ToughNegotiator,4,our_buyer,our_first,False,34.0,12.0,0.0,30,null
+single_issue_50_overlap,ToughNegotiator,4,our_buyer,our_second,False,34.0,12.0,0.0,30,null
+single_issue_50_overlap,ToughNegotiator,4,our_seller,our_first,False,12.0,34.0,0.0,30,null
+single_issue_50_overlap,ToughNegotiator,4,our_seller,our_second,False,12.0,34.0,0.0,30,null
+single_issue_50_overlap,ToughNegotiator,5,our_buyer,our_first,False,34.0,12.0,0.0,30,null
+single_issue_50_overlap,ToughNegotiator,5,our_buyer,our_second,False,34.0,12.0,0.0,30,null
+single_issue_50_overlap,ToughNegotiator,5,our_seller,our_first,False,12.0,34.0,0.0,30,null
+single_issue_50_overlap,ToughNegotiator,5,our_seller,our_second,False,12.0,34.0,0.0,30,null
+two_issue_5x5,AspirationNegotiator,1,our_buyer,our_first,True,2.0,2.0,0.6400000000000001,25,"[2, 2]"
+two_issue_5x5,AspirationNegotiator,1,our_buyer,our_second,True,2.0,2.0,0.6400000000000001,24,"[2, 2]"
+two_issue_5x5,AspirationNegotiator,1,our_seller,our_first,True,2.0,2.0,0.6400000000000001,25,"[2, 2]"
+two_issue_5x5,AspirationNegotiator,1,our_seller,our_second,True,2.0,2.0,0.6400000000000001,24,"[2, 2]"
+two_issue_5x5,AspirationNegotiator,2,our_buyer,our_first,True,2.0,2.0,0.6400000000000001,25,"[2, 2]"
+two_issue_5x5,AspirationNegotiator,2,our_buyer,our_second,True,2.0,2.0,0.6400000000000001,24,"[2, 2]"
+two_issue_5x5,AspirationNegotiator,2,our_seller,our_first,True,2.0,2.0,0.6400000000000001,25,"[2, 2]"
+two_issue_5x5,AspirationNegotiator,2,our_seller,our_second,True,2.0,2.0,0.6400000000000001,24,"[2, 2]"
+two_issue_5x5,AspirationNegotiator,3,our_buyer,our_first,True,2.0,2.0,0.6400000000000001,25,"[2, 2]"
+two_issue_5x5,AspirationNegotiator,3,our_buyer,our_second,True,2.0,2.0,0.6400000000000001,24,"[2, 2]"
+two_issue_5x5,AspirationNegotiator,3,our_seller,our_first,True,2.0,2.0,0.6400000000000001,25,"[2, 2]"
+two_issue_5x5,AspirationNegotiator,3,our_seller,our_second,True,2.0,2.0,0.6400000000000001,24,"[2, 2]"
+two_issue_5x5,AspirationNegotiator,4,our_buyer,our_first,True,2.0,2.0,0.6400000000000001,25,"[2, 2]"
+two_issue_5x5,AspirationNegotiator,4,our_buyer,our_second,True,2.0,2.0,0.6400000000000001,24,"[2, 2]"
+two_issue_5x5,AspirationNegotiator,4,our_seller,our_first,True,2.0,2.0,0.6400000000000001,25,"[2, 2]"
+two_issue_5x5,AspirationNegotiator,4,our_seller,our_second,True,2.0,2.0,0.6400000000000001,24,"[2, 2]"
+two_issue_5x5,AspirationNegotiator,5,our_buyer,our_first,True,2.0,2.0,0.6400000000000001,25,"[2, 2]"
+two_issue_5x5,AspirationNegotiator,5,our_buyer,our_second,True,2.0,2.0,0.6400000000000001,24,"[2, 2]"
+two_issue_5x5,AspirationNegotiator,5,our_seller,our_first,True,2.0,2.0,0.6400000000000001,25,"[2, 2]"
+two_issue_5x5,AspirationNegotiator,5,our_seller,our_second,True,2.0,2.0,0.6400000000000001,24,"[2, 2]"
+two_issue_5x5,BoulwareTBNegotiator,1,our_buyer,our_first,True,2.0,2.0,0.6400000000000001,25,"[2, 2]"
+two_issue_5x5,BoulwareTBNegotiator,1,our_buyer,our_second,True,2.0,2.0,0.6400000000000001,24,"[2, 2]"
+two_issue_5x5,BoulwareTBNegotiator,1,our_seller,our_first,True,2.0,2.0,0.6400000000000001,25,"[2, 2]"
+two_issue_5x5,BoulwareTBNegotiator,1,our_seller,our_second,True,2.0,2.0,0.6400000000000001,24,"[2, 2]"
+two_issue_5x5,BoulwareTBNegotiator,2,our_buyer,our_first,True,2.0,2.0,0.6400000000000001,25,"[2, 2]"
+two_issue_5x5,BoulwareTBNegotiator,2,our_buyer,our_second,True,2.0,2.0,0.6400000000000001,24,"[2, 2]"
+two_issue_5x5,BoulwareTBNegotiator,2,our_seller,our_first,True,2.0,2.0,0.6400000000000001,25,"[2, 2]"
+two_issue_5x5,BoulwareTBNegotiator,2,our_seller,our_second,True,2.0,2.0,0.6400000000000001,24,"[2, 2]"
+two_issue_5x5,BoulwareTBNegotiator,3,our_buyer,our_first,True,2.0,2.0,0.6400000000000001,25,"[2, 2]"
+two_issue_5x5,BoulwareTBNegotiator,3,our_buyer,our_second,True,2.0,2.0,0.6400000000000001,24,"[2, 2]"
+two_issue_5x5,BoulwareTBNegotiator,3,our_seller,our_first,True,2.0,2.0,0.6400000000000001,25,"[2, 2]"
+two_issue_5x5,BoulwareTBNegotiator,3,our_seller,our_second,True,2.0,2.0,0.6400000000000001,24,"[2, 2]"
+two_issue_5x5,BoulwareTBNegotiator,4,our_buyer,our_first,True,2.0,2.0,0.6400000000000001,25,"[2, 2]"
+two_issue_5x5,BoulwareTBNegotiator,4,our_buyer,our_second,True,2.0,2.0,0.6400000000000001,24,"[2, 2]"
+two_issue_5x5,BoulwareTBNegotiator,4,our_seller,our_first,True,2.0,2.0,0.6400000000000001,25,"[2, 2]"
+two_issue_5x5,BoulwareTBNegotiator,4,our_seller,our_second,True,2.0,2.0,0.6400000000000001,24,"[2, 2]"
+two_issue_5x5,BoulwareTBNegotiator,5,our_buyer,our_first,True,2.0,2.0,0.6400000000000001,25,"[2, 2]"
+two_issue_5x5,BoulwareTBNegotiator,5,our_buyer,our_second,True,2.0,2.0,0.6400000000000001,24,"[2, 2]"
+two_issue_5x5,BoulwareTBNegotiator,5,our_seller,our_first,True,2.0,2.0,0.6400000000000001,25,"[2, 2]"
+two_issue_5x5,BoulwareTBNegotiator,5,our_seller,our_second,True,2.0,2.0,0.6400000000000001,24,"[2, 2]"
+two_issue_5x5,ConcederTBNegotiator,1,our_buyer,our_first,True,2.5999999999999996,1.4,0.27999999999999986,22,"[1, 2]"
+two_issue_5x5,ConcederTBNegotiator,1,our_buyer,our_second,True,2.5999999999999996,1.4,0.27999999999999986,22,"[1, 2]"
+two_issue_5x5,ConcederTBNegotiator,1,our_seller,our_first,True,2.5999999999999996,1.4,0.27999999999999986,22,"[3, 2]"
+two_issue_5x5,ConcederTBNegotiator,1,our_seller,our_second,True,2.5999999999999996,1.4,0.27999999999999986,22,"[3, 2]"
+two_issue_5x5,ConcederTBNegotiator,2,our_buyer,our_first,True,2.5999999999999996,1.4,0.27999999999999986,22,"[1, 2]"
+two_issue_5x5,ConcederTBNegotiator,2,our_buyer,our_second,True,2.5999999999999996,1.4,0.27999999999999986,22,"[1, 2]"
+two_issue_5x5,ConcederTBNegotiator,2,our_seller,our_first,True,2.5999999999999996,1.4,0.27999999999999986,22,"[3, 2]"
+two_issue_5x5,ConcederTBNegotiator,2,our_seller,our_second,True,2.5999999999999996,1.4,0.27999999999999986,22,"[3, 2]"
+two_issue_5x5,ConcederTBNegotiator,3,our_buyer,our_first,True,2.5999999999999996,1.4,0.27999999999999986,22,"[1, 2]"
+two_issue_5x5,ConcederTBNegotiator,3,our_buyer,our_second,True,2.5999999999999996,1.4,0.27999999999999986,22,"[1, 2]"
+two_issue_5x5,ConcederTBNegotiator,3,our_seller,our_first,True,2.5999999999999996,1.4,0.27999999999999986,22,"[3, 2]"
+two_issue_5x5,ConcederTBNegotiator,3,our_seller,our_second,True,2.5999999999999996,1.4,0.27999999999999986,22,"[3, 2]"
+two_issue_5x5,ConcederTBNegotiator,4,our_buyer,our_first,True,2.5999999999999996,1.4,0.27999999999999986,22,"[1, 2]"
+two_issue_5x5,ConcederTBNegotiator,4,our_buyer,our_second,True,2.5999999999999996,1.4,0.27999999999999986,22,"[1, 2]"
+two_issue_5x5,ConcederTBNegotiator,4,our_seller,our_first,True,2.5999999999999996,1.4,0.27999999999999986,22,"[3, 2]"
+two_issue_5x5,ConcederTBNegotiator,4,our_seller,our_second,True,2.5999999999999996,1.4,0.27999999999999986,22,"[3, 2]"
+two_issue_5x5,ConcederTBNegotiator,5,our_buyer,our_first,True,2.5999999999999996,1.4,0.27999999999999986,22,"[1, 2]"
+two_issue_5x5,ConcederTBNegotiator,5,our_buyer,our_second,True,2.5999999999999996,1.4,0.27999999999999986,22,"[1, 2]"
+two_issue_5x5,ConcederTBNegotiator,5,our_seller,our_first,True,2.5999999999999996,1.4,0.27999999999999986,22,"[3, 2]"
+two_issue_5x5,ConcederTBNegotiator,5,our_seller,our_second,True,2.5999999999999996,1.4,0.27999999999999986,22,"[3, 2]"
+two_issue_5x5,RandomNegotiator,1,our_buyer,our_first,True,4.0,0.0,0.0,3,"[0, 0]"
+two_issue_5x5,RandomNegotiator,1,our_buyer,our_second,True,4.0,0.0,0.0,1,"[0, 0]"
+two_issue_5x5,RandomNegotiator,1,our_seller,our_first,True,4.0,0.0,0.0,3,"[4, 4]"
+two_issue_5x5,RandomNegotiator,1,our_seller,our_second,True,4.0,0.0,0.0,8,"[4, 4]"
+two_issue_5x5,RandomNegotiator,2,our_buyer,our_first,True,4.0,0.0,0.0,8,"[0, 0]"
+two_issue_5x5,RandomNegotiator,2,our_buyer,our_second,True,4.0,0.0,0.0,6,"[0, 0]"
+two_issue_5x5,RandomNegotiator,2,our_seller,our_first,True,4.0,0.0,0.0,4,"[4, 4]"
+two_issue_5x5,RandomNegotiator,2,our_seller,our_second,True,4.0,0.0,0.0,1,"[4, 4]"
+two_issue_5x5,RandomNegotiator,3,our_buyer,our_first,True,4.0,0.0,0.0,8,"[0, 0]"
+two_issue_5x5,RandomNegotiator,3,our_buyer,our_second,False,1.2,1.2,0.0,3,null
+two_issue_5x5,RandomNegotiator,3,our_seller,our_first,False,1.2,1.2,0.0,3,null
+two_issue_5x5,RandomNegotiator,3,our_seller,our_second,False,1.2,1.2,0.0,2,null
+two_issue_5x5,RandomNegotiator,4,our_buyer,our_first,True,4.0,0.0,0.0,2,"[0, 0]"
+two_issue_5x5,RandomNegotiator,4,our_buyer,our_second,True,4.0,0.0,0.0,2,"[0, 0]"
+two_issue_5x5,RandomNegotiator,4,our_seller,our_first,True,4.0,0.0,0.0,5,"[4, 4]"
+two_issue_5x5,RandomNegotiator,4,our_seller,our_second,False,1.2,1.2,0.0,3,null
+two_issue_5x5,RandomNegotiator,5,our_buyer,our_first,True,4.0,0.0,0.0,5,"[0, 0]"
+two_issue_5x5,RandomNegotiator,5,our_buyer,our_second,False,1.2,1.2,0.0,10,null
+two_issue_5x5,RandomNegotiator,5,our_seller,our_first,False,1.2,1.2,0.0,6,null
+two_issue_5x5,RandomNegotiator,5,our_seller,our_second,True,4.0,0.0,0.0,2,"[4, 4]"
+two_issue_5x5,ToughNegotiator,1,our_buyer,our_first,False,1.2,1.2,0.0,25,null
+two_issue_5x5,ToughNegotiator,1,our_buyer,our_second,False,1.2,1.2,0.0,25,null
+two_issue_5x5,ToughNegotiator,1,our_seller,our_first,False,1.2,1.2,0.0,25,null
+two_issue_5x5,ToughNegotiator,1,our_seller,our_second,False,1.2,1.2,0.0,25,null
+two_issue_5x5,ToughNegotiator,2,our_buyer,our_first,False,1.2,1.2,0.0,25,null
+two_issue_5x5,ToughNegotiator,2,our_buyer,our_second,False,1.2,1.2,0.0,25,null
+two_issue_5x5,ToughNegotiator,2,our_seller,our_first,False,1.2,1.2,0.0,25,null
+two_issue_5x5,ToughNegotiator,2,our_seller,our_second,False,1.2,1.2,0.0,25,null
+two_issue_5x5,ToughNegotiator,3,our_buyer,our_first,False,1.2,1.2,0.0,25,null
+two_issue_5x5,ToughNegotiator,3,our_buyer,our_second,False,1.2,1.2,0.0,25,null
+two_issue_5x5,ToughNegotiator,3,our_seller,our_first,False,1.2,1.2,0.0,25,null
+two_issue_5x5,ToughNegotiator,3,our_seller,our_second,False,1.2,1.2,0.0,25,null
+two_issue_5x5,ToughNegotiator,4,our_buyer,our_first,False,1.2,1.2,0.0,25,null
+two_issue_5x5,ToughNegotiator,4,our_buyer,our_second,False,1.2,1.2,0.0,25,null
+two_issue_5x5,ToughNegotiator,4,our_seller,our_first,False,1.2,1.2,0.0,25,null
+two_issue_5x5,ToughNegotiator,4,our_seller,our_second,False,1.2,1.2,0.0,25,null
+two_issue_5x5,ToughNegotiator,5,our_buyer,our_first,False,1.2,1.2,0.0,25,null
+two_issue_5x5,ToughNegotiator,5,our_buyer,our_second,False,1.2,1.2,0.0,25,null
+two_issue_5x5,ToughNegotiator,5,our_seller,our_first,False,1.2,1.2,0.0,25,null
+two_issue_5x5,ToughNegotiator,5,our_seller,our_second,False,1.2,1.2,0.0,25,null

@@ -12,9 +12,7 @@ class Group68_Negotiator(SAONegotiator):
     # AC_next margin: accept only if current offer is meaningfully better than our next planned bid.
     NEXT_OFFER_MARGIN = 0.8
     # Deadline stage at which special late-accept logic is enabled.
-    LATE_ACCEPT_TIME = 0.98
-    # Minimum acceptable share of utility span near deadline (reservation + ratio * span).
-    LATE_FLOOR_RATIO = 0.50
+    LATE_ACCEPT_TIME = 0.95
 
     def _adaptive_next_offer_margin(self, t: float) -> float:
         margin = self.NEXT_OFFER_MARGIN
@@ -37,19 +35,6 @@ class Group68_Negotiator(SAONegotiator):
             margin -= 0.40
 
         return max(0.20, margin)
-
-    def _adaptive_late_floor_ratio(self) -> float:
-        ratio = self.LATE_FLOOR_RATIO
-        opponent_style = self.opponent_model.get_opponent_style()
-
-        if opponent_style == "hardliner":
-            ratio += 0.10
-        elif opponent_style == "late_conceder":
-            ratio += 0.08
-        elif opponent_style == "conceder":
-            ratio -= 0.05
-
-        return min(0.75, max(0.35, ratio))
 
     # Initialize all of the sub components, like bidding strategy, acceptance strategy, opponent model, etc...
     # Reset any stateful variables to prepare for a new negotiation.
@@ -96,16 +81,9 @@ class Group68_Negotiator(SAONegotiator):
             return ResponseType.ACCEPT_OFFER
 
         if t >= self.LATE_ACCEPT_TIME:
-            late_floor_ratio = self._adaptive_late_floor_ratio()
-            late_floor = float(self.ufun.reserved_value) + late_floor_ratio * (
-                self.acceptance_strategy.max_utility - float(self.ufun.reserved_value)
-            )
-            late_minimum = max(
-                float(self.ufun.reserved_value),
-                self.acceptance_strategy.acceptance_threshold(t),
-                late_floor,
-            )
-            if outcome_utility(self.ufun, offer) >= late_minimum:
+            # The final deadline fallback should never reject an offer that is
+            # at least as good as no agreement.
+            if outcome_utility(self.ufun, offer) >= float(self.ufun.reserved_value):
                 return ResponseType.ACCEPT_OFFER
 
         return ResponseType.REJECT_OFFER
