@@ -164,8 +164,7 @@ class BiddingStrategy:
     # Our strategy, returning the minimum utility we are willing to bid at time t in [0, 1].
     # At t=0 we want to be ambitous, bid high and closer to deadling we want to concede more
     # Ofcourse never under our reservation value. 
-    # We can use different concession curves, like Boulware (concede late), Conceder (concede early) or Linear.
-    # Also more info on this in "Introduction to Automated Negotiation" by de Jonge. 
+
     def target_utility(self, t: float) -> float:
         t = min(1.0, max(0.0, float(t)))
 
